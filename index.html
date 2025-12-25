@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Processing...</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      text-align: center;
+    }
+    #message {
+      font-size: 2rem;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="message">Processing connection...</div>
+
+  <script>
+    // After 5 seconds, show 503 error
+    setTimeout(() => {
+      const msg = document.getElementById('message');
+      msg.textContent = 'Error 503: Service Unavailable';
+      msg.classList.add('error');
+    }, 5000);
+  </script>
+</body>
+</html>
